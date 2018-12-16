@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+   mysqlserver:
+#     image: mysqlServer
+     build: .
+     ports:
+       - "3305:3305"
+     environment:
+       - MYSQL_ROOT_PASSWORD=simple
+     volumes:
+       - /Users/mbp_principal/data:/var/lib/mysql
+#       - .:/etc/mysql
