@@ -3,6 +3,7 @@ version: '3'
 services:
    mysqlserver:
 #     image: mysqlServer
+#     hostname: mysqlserver
      build: .
      ports:
        - "3305:3305"
@@ -10,4 +11,4 @@ services:
        - MYSQL_ROOT_PASSWORD=simple
      volumes:
        - /Users/mbp_principal/data:/var/lib/mysql
-#       - .:/etc/mysql
+#       - ./Users/mbp_principal/data:/var/lib/mysql:ro (ro -> read onlyy on local machine)
